@@ -1,36 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jpes <jpes@student.42nice.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/03 16:04:26 by jpes              #+#    #+#             */
-/*   Updated: 2023/05/03 16:04:50 by jpes             ###   ########.fr       */
+/*   Created: 2023/05/08 18:10:36 by jpes              #+#    #+#             */
+/*   Updated: 2023/05/08 18:10:40 by jpes             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-void	ft_putnbr_fd(int n, int fd)
+void	ft_putnbr(int n)
 {
 	if (n == -2147483648)
 	{
-		write(fd, "-2147483648", 11);
+		write(1, "-2147483648", 11);
 		return ;
 	}
 	if (n < 0)
 	{
-		write(fd, "-", 1);
+		write(1, "-", 1);
 		n = n * (-1);
 	}
 	if (n <= 9)
 	{
-		ft_putchar_fd(n + 48, fd);
+		ft_putchar(n + 48);
 	}
 	else
 	{
-		ft_putnbr_fd(n / 10, fd);
-		ft_putnbr_fd(n % 10, fd);
+		ft_putnbr_fd(n / 10, 1);
+		ft_putnbr_fd(n % 10, 1);
 	}
 }
