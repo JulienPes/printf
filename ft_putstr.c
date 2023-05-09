@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printf.h                                           :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jpes <jpes@student.42nice.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/08 18:10:21 by jpes              #+#    #+#             */
-/*   Updated: 2023/05/09 13:37:20 by jpes             ###   ########.fr       */
+/*   Created: 2023/05/05 13:42:06 by jpes              #+#    #+#             */
+/*   Updated: 2023/05/09 12:08:27 by jpes             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRINTF_H
-# define PRINTF_H
+#include "printf.h"
 
-# include <stdarg.h>
-# include <unistd.h>
-# include <string.h>
-# include <stdlib.h>
-# include <stdio.h>
-
-int	ft_printf(const char *format, ...);
-int	ft_formats(va_list args, const char format);
-int	ft_putnbr(int n, int length);
-int	ft_putchar(int c);
-int	ft_putstr(char *s);
-int   ft_putptr(void* ptr);
-
-
-
-#endif
+int	ft_putstr(char *s)
+{
+	int	i;
+	
+	i = 0;
+	while (s[i] != '\0')
+	{
+		write(1, &s[i], 1);
+		i ++;
+	}
+	return(i);
+}
