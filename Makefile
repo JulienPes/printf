@@ -6,18 +6,23 @@
 #    By: jpes <jpes@student.42nice.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/08 18:10:08 by jpes              #+#    #+#              #
-#    Updated: 2023/05/09 13:16:35 by jpes             ###   ########.fr        #
+#    Updated: 2023/05/10 17:55:59 by jpes             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CFLAGS = -Wall -Wextra -Werror
 NAME = libftprintf.a
 SRCS = 	ft_printf.c \
-		ft_formats.c \
-		ft_putchar.c \
-		ft_putnbr.c \
-		ft_putstr.c \
-		ft_putptr.c \
+			ft_formats.c \
+			ft_print_d_i.c \
+			ft_print_p.c \
+			ft_print_s.c \
+			ft_print_u.c \
+			ft_print_c.c \
+			ft_print_up_x.c \
+			ft_print_x.c \
+			ft_print_percent.c \
+			ft_zero_case.c \
 			
 OBJECTS = ${SRCS:.c=.o}
 RM = rm -f
