@@ -6,7 +6,7 @@
 /*   By: jpes <jpes@student.42nice.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 18:10:49 by jpes              #+#    #+#             */
-/*   Updated: 2023/05/10 18:22:02 by jpes             ###   ########.fr       */
+/*   Updated: 2023/05/11 11:42:23 by jpes             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int ft_printf(const char *format, ...)
 
 // int main(int argc, char const *argv[])
 // {
-//    ft_printf(" NULL %s NULL ", NULL);
-//    printf(" NULL %s NULL ", NULL);
+//    ft_printf("Le miens -> NULL %s NULL \n", NULL);
+//    printf("Le bon -> NULL %s NULL \n", NULL);
 //    return 0;
 // }

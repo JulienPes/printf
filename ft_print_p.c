@@ -6,43 +6,28 @@
 /*   By: jpes <jpes@student.42nice.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 14:03:11 by jpes              #+#    #+#             */
-/*   Updated: 2023/05/10 17:49:06 by jpes             ###   ########.fr       */
+/*   Updated: 2023/05/11 14:39:12 by jpes             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int   ft_print_p(void* ptr)
+int   ft_print_p(unsigned long ptr)
 {
-   unsigned long  n;
+   char *base_16;
    int   i;
-   int   digit;
-   int length;
-   char buffer[16];
-   
-   n = (unsigned long)ptr;
+
+   base_16 = "0123456789abcdef";
    i = 0;
-   length = 0;
-   if (n == 0)
+   
+   if (ptr >= 16)
    {
-      ft_print_s("0x0");
-      return (3);
+      i = ft_print_p(ptr / 16);
+      ft_print_c(base_16[ptr % 16]);
    }
-   digit = 0;
-   buffer[i] = '0';
-   i = 15;
-   while (n > 0)
+   else
    {
-      digit = n % 16;
-      if (digit < 10)
-         buffer[i] = '0' + digit;
-      else
-         buffer[i] = 'a' + digit - 10;
-      i --;
-      n /= 16;
-      length ++;
+      ft_print_c(base_16[ptr % 16]);
    }
-   ft_print_s("0x");
-   ft_print_s(buffer + i + 1);
-   return(length + 2);
+   return(i + 1);
 }
