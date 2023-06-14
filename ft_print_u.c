@@ -6,7 +6,7 @@
 /*   By: jpes <jpes@student.42nice.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 14:48:51 by jpes              #+#    #+#             */
-/*   Updated: 2023/05/10 17:49:35 by jpes             ###   ########.fr       */
+/*   Updated: 2023/05/12 12:14:05 by jpes             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ int	ft_print_u(unsigned int n, int length)
 	}
 	if (n < 0)
 	{
-      n = 4294967295 - n;
-      length += ft_print_u(n % 10, length);
+		n = 4294967295 - n;
+		length += ft_print_u(n % 10, length);
 	}
 	if (n <= 9)
 	{

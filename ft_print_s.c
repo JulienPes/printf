@@ -6,21 +6,16 @@
 /*   By: jpes <jpes@student.42nice.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 13:42:06 by jpes              #+#    #+#             */
-/*   Updated: 2023/05/11 11:53:43 by jpes             ###   ########.fr       */
+/*   Updated: 2023/05/12 12:13:10 by jpes             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-// char	*ft_null_case()
-// {
-// 	return (NULL);
-// }
-
 int	ft_print_s(char *s)
 {
 	int	i;
-	
+
 	i = 0;
 	if (s == NULL)
 	{
@@ -32,6 +27,5 @@ int	ft_print_s(char *s)
 		write(1, &s[i], 1);
 		i ++;
 	}
-
-	return(i);
+	return (i);
 }

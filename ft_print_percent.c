@@ -6,13 +6,13 @@
 /*   By: jpes <jpes@student.42nice.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 16:45:17 by jpes              #+#    #+#             */
-/*   Updated: 2023/05/10 17:49:12 by jpes             ###   ########.fr       */
+/*   Updated: 2023/05/12 12:11:16 by jpes             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int   ft_print_percent()
+int	ft_print_percent(void)
 {
-   return(ft_print_c('%'));
+	return (ft_print_c('%'));
 }

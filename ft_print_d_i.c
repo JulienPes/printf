@@ -6,12 +6,11 @@
 /*   By: jpes <jpes@student.42nice.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 18:10:36 by jpes              #+#    #+#             */
-/*   Updated: 2023/05/11 12:42:05 by jpes             ###   ########.fr       */
+/*   Updated: 2023/05/12 12:04:05 by jpes             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
 
 int	ft_print_d_i(int n, int length)
 {
@@ -37,4 +36,3 @@ int	ft_print_d_i(int n, int length)
 	}
 	return (length);
 }
-

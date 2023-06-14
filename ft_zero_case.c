@@ -6,14 +6,14 @@
 /*   By: jpes <jpes@student.42nice.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 17:13:05 by jpes              #+#    #+#             */
-/*   Updated: 2023/05/10 17:50:20 by jpes             ###   ########.fr       */
+/*   Updated: 2023/05/12 12:35:46 by jpes             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int   ft_zero_case()
+int	ft_zero_case(void)
 {
-   ft_print_s("0");
-   return (1);
+	ft_print_s("0");
+	return (1);
 }

@@ -6,13 +6,13 @@
 /*   By: jpes <jpes@student.42nice.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 18:09:46 by jpes              #+#    #+#             */
-/*   Updated: 2023/05/10 17:48:56 by jpes             ###   ########.fr       */
+/*   Updated: 2023/05/12 12:02:33 by jpes             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_print_c(int c)
+int	ft_print_c(int c)
 {
 	write(1, &c, 1);
 	return (1);
